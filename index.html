@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostMan Clone</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./prism.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">PostMan</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <h1 class="title">Welcome to PostMan</h1>
+        <div class="url_box">
+            <label for="" class="width_small small_text">URL</label>
+            <input type="text" name="url" class="url width_large" placeholder="Enter URL here" autocomplete="off">
+        </div>
+        <div class="request_container">
+            <label for="" class="width_small small_text">Request Type</label>
+            <div class="request_box width_large">
+                <div class="request_box1">
+                    <input type="radio" name="requestRadio" class="getRequest" value="GET" checked>
+                    <label for="" class="small_text">GET</label>
+                </div>
+                <div class="request_box2">
+                    <input type="radio" name="requestRadio" class="postRequest" value="POST">
+                    <label for="" class="small_text">POST</label>
+                </div>
+            </div>
+        </div>
+        <div class="content_container">
+            <label for="" class="width_small small_text">Content Type</label>
+            <div class="content_box width_large">
+                <div class="content_box1">
+                    <input type="radio" name="contentRadio" class="json_content get" value="JSON" checked>
+                    <label for="" class="small_text">JSON</label>
+                </div>
+                <div class="content_box2">
+                    <input type="radio" name="contentRadio" class="post param_content" value="Custom Parameters">
+                    <label for="" class="small_text">Custom Parameters</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="json_box">
+            <label for="" class="width_small small_text">Enter Request Json</label>
+            <textarea name="jsonTextarea" class="jsonTextarea width_large" cols="30" rows="10"></textarea>
+        </div>
+        <div class="param_container">
+            <label for="" class="width_small small_text">Parameters</label>
+            <div class="param_box width_large">
+                <div class="param_box1">
+                    <input type="text" name="" class="param_input param_input1 parameter_key1" placeholder="Enter Parameter 1 key">
+                    <input type="text" name="" class="param_input parameter_value1" placeholder="Enter Parameter 1 value">
+                    <button class="addBtn">+</button>
+                </div>
+                <div class="addParamBox"></div>
+            </div>
+        </div>
+       <button class="submit">Submit</button>
+       <div class="response_box">
+        <label for="" class="width_small small_text">Response</label>
+        <!--<div class="response">Your response will appear here</div>-->
+        
+        <div class="response width_large">
+            <pre class="language-javascript" id="response_pre">
+                <code class="language-javascript" id="responsePrism">
+                    Your response will appear here
+                </code>
+            </pre>
+        </div>
+       </div>
+    </div>
+    <div class="confirmContainer">
+        <div class="confirmBox">
+            <h6 class="website_name">PostMan Clone Says</h6>
+            <p>Do you want to delete this</p>
+            <div class="confirmButtons">
+                <button class="confirmBtn confirmBtn1">Ok</button>
+                <button class="confirmBtn confirmBtn2">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./prism.js"></script>
+</body>
+</html>
